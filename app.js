@@ -30,8 +30,8 @@ bot.onText(/\/start/, function (msg) {
       xhr.open('GET', requestURL, false);
       xhr.send();
       if (xhr.status /*!= 200*/) {
-        bot.sendMessage(chatId, xhr.status + ': ' + xhr.statusText); //вывод: 404: Not Found
-      } else {
+/*        bot.sendMessage(chatId, xhr.status + ': ' + xhr.statusText); //вывод: 404: Not Found
+      } else { */
         const data = JSON.parse(xhr.responseText);
         cryptomsg.push(item.toUpperCase() + " : " + data.ticker.price);     
         xhr.abort();
