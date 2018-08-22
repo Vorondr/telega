@@ -31,7 +31,6 @@ bot.onText(/\/start/, function (msg) {
       xhr.send();
       const data = JSON.parse(xhr.responseText);
       cryptomsg.push(item.toUpperCase() + " : " + data.ticker.price);
-      }
     });
     if (cryptomsg.length === 10) {
       var stringMsg = JSON.stringify(cryptomsg, null, 4);
