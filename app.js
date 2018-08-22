@@ -43,7 +43,7 @@ bot.onText(/\/start/, function (msg) {
     } else {
       bot.sendMessage(chatId, "Что-то пошло не так :(");
     } 
-  }, 1000);
+  }, 60000);
 });
 
 bot.onText(/\/stop/, function (msg) {
